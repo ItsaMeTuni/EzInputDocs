@@ -1,0 +1,17 @@
+site_name: EZInput
+
+# Documentation and theme
+theme:
+  name: 'material'
+  custom_dir: 'theme'
+  palette:
+    primary: 'magenta'
+    accent: 'light blue'
+
+extra_css:
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
+
+markdown_extensions:
+  - admonition
+  - codehilite
