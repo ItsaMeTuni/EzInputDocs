@@ -13,9 +13,6 @@ The first thing you want to do when you import EzInput to your project is substi
 
 If you go to `EzInput/Data` you'll see there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The _EzInputBindings_ file is where all your bindings will be stored. If you click on the _EzInputBindings_ file and then "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs. You can read an in-depth review on the Bindings file [here](The-bindings.md).
 
-!!! note
-    You can create a new bindings file through the Create menu.
-
 ## Reading the values through code
 
 The best way to explain how to read values is by using examples, so here they are:

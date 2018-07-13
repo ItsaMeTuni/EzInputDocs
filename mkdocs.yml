@@ -15,3 +15,11 @@ extra_css:
 markdown_extensions:
   - admonition
   - codehilite
+
+pages:
+  - Getting started: 'index.md'
+  - Bindings: 'bindings.md'
+  - Controller profiles: 'controller-profiles.md'
+  - The test scene: 'the-test-scene.md'
+  - Code reference: 'code-reference.md'
+  - The EzInput prefab: 'the-ezinput-prefab.md'
