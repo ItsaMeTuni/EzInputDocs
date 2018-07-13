@@ -69,7 +69,7 @@
     
 <meta name="theme-color" content="#212121">
 
-<link rel='icon' href='/assets/images/favicon.ico'>
+<link rel='icon' href='/assets/images/favicon.png'>
 
 <meta name='apple-mobile-web-app-capable' content='yes'>
 <meta name='mobile-web-app-capable' content='yes'>
@@ -252,7 +252,43 @@
 
 
   <li class="md-nav__item">
-    <a href="Code-reference/" title="Code reference" class="md-nav__link">
+    <a href="bindings/" title="Bindings" class="md-nav__link">
+      Bindings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="controller-profiles/" title="Controller profiles" class="md-nav__link">
+      Controller profiles
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="the-test-scene/" title="The test scene" class="md-nav__link">
+      The test scene
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="code-reference/" title="Code reference" class="md-nav__link">
       Code reference
     </a>
   </li>
@@ -264,32 +300,8 @@
 
 
   <li class="md-nav__item">
-    <a href="The-EzInput-prefab/" title="The EzInput prefab" class="md-nav__link">
+    <a href="the-ezinput-prefab/" title="The EzInput prefab" class="md-nav__link">
       The EzInput prefab
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="The-bindings/" title="The bindings" class="md-nav__link">
-      The bindings
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="controller-configs/" title="Controller configs" class="md-nav__link">
-      Controller configs
     </a>
   </li>
 
@@ -361,11 +373,7 @@
 <p>you might want to make a backup of your <code>InputManager.asset</code> since you might want that input configuration back in case you decide not to use EzInput (not that there is a reason for taking a stupid decision as that 😅).</p>
 </div>
 <h2 id="setting-up-the-bindings">Setting up the bindings</h2>
-<p>If you go to <code>EzInput/Data</code> you'll see there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The <em>EzInputBindings</em> file is where all your bindings will be stored. If you click on the <em>EzInputBindings</em> file and then "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs. You can read an in-depth review on the Bindings file <a href="The-bindings/">here</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can create a new bindings file through the Create menu.</p>
-</div>
+<p>If you go to <code>EzInput/Data</code> you'll see there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The <em>EzInputBindings</em> file is where all your bindings will be stored. If you click on the <em>EzInputBindings</em> file and then "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs. You can read an in-depth review on the Bindings file <a href="The-bindings.md">here</a>.</p>
 <h2 id="reading-the-values-through-code">Reading the values through code</h2>
 <p>The best way to explain how to read values is by using examples, so here they are:</p>
 <div class="codehilite"><pre><span></span><span class="c1">//This will return true when the user presses the Cross button on a PS4 controller or A button on an XBox controller in any of the connected controllers</span>
@@ -445,13 +453,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="Code-reference/" title="Code reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="bindings/" title="Bindings" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Code reference
+                Bindings
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

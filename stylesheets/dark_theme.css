@@ -27,6 +27,15 @@ Code block scrollbar
   color: #0091ea !important;
 }
 
+.md-nav__link
+{
+  text-align: left !important;
+}
+
+.md-typeset a {
+  color: #429aff !important;
+}
+
 /*
 Default text color
 and background color

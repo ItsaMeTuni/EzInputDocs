@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2018-07-11</lastmod>
+     <lastmod>2018-07-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/Code-reference/</loc>
-     <lastmod>2018-07-11</lastmod>
+     <loc>/bindings/</loc>
+     <lastmod>2018-07-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/The-EzInput-prefab/</loc>
-     <lastmod>2018-07-11</lastmod>
+     <loc>/controller-profiles/</loc>
+     <lastmod>2018-07-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/The-bindings/</loc>
-     <lastmod>2018-07-11</lastmod>
+     <loc>/the-test-scene/</loc>
+     <lastmod>2018-07-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/controller-configs/</loc>
-     <lastmod>2018-07-11</lastmod>
+     <loc>/code-reference/</loc>
+     <lastmod>2018-07-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/the-ezinput-prefab/</loc>
+     <lastmod>2018-07-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
