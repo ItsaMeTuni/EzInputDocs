@@ -36,7 +36,7 @@
     
     
       
-        <title>Bindings - EZInput</title>
+        <title>Help - EZInput</title>
       
     
     
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#the-bindings" tabindex="1" class="md-skip">
+      <a href="#help" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -117,7 +117,7 @@
                 EZInput
               </span>
               <span class="md-header-nav__topic">
-                Bindings
+                Help
               </span>
             
           
@@ -198,63 +198,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Bindings
-      </label>
-    
-    <a href="./" title="Bindings" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../bindings/" title="Bindings" class="md-nav__link">
       Bindings
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#button-bindings" title="Button bindings" class="md-nav__link">
-    Button bindings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#axis-bindings" title="Axis bindings" class="md-nav__link">
-    Axis bindings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multiple-bindings-with-the-same-name" title="Multiple bindings with the same name" class="md-nav__link">
-    Multiple bindings with the same name
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -322,11 +270,56 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../help/" title="Help" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Help
+      </label>
+    
+    <a href="./" title="Help" class="md-nav__link md-nav__link--active">
       Help
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ezinput-is-not-detecting-my-controller-profile" title="EzInput is not detecting my controller profile" class="md-nav__link">
+    EzInput is not detecting my controller profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-change-the-bindings-controller-profiles-or-default-controller-profile-at-runtime" title="How do I change the bindings, controller profiles or default controller profile at runtime?" class="md-nav__link">
+    How do I change the bindings, controller profiles or default controller profile at runtime?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -351,22 +344,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#button-bindings" title="Button bindings" class="md-nav__link">
-    Button bindings
+  <a href="#ezinput-is-not-detecting-my-controller-profile" title="EzInput is not detecting my controller profile" class="md-nav__link">
+    EzInput is not detecting my controller profile
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#axis-bindings" title="Axis bindings" class="md-nav__link">
-    Axis bindings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multiple-bindings-with-the-same-name" title="Multiple bindings with the same name" class="md-nav__link">
-    Multiple bindings with the same name
+  <a href="#how-do-i-change-the-bindings-controller-profiles-or-default-controller-profile-at-runtime" title="How do I change the bindings, controller profiles or default controller profile at runtime?" class="md-nav__link">
+    How do I change the bindings, controller profiles or default controller profile at runtime?
   </a>
   
 </li>
@@ -388,24 +374,13 @@
               
                 
                 
-                <h1 id="the-bindings">The bindings</h1>
-<p>If you go to <code>EzInput/Data</code> you will see that there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The <em>Bindings</em> file is where all your bindings will be stored. If you click on the <em>Bindings</em> file and then "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can create a new bindings file through the Create menu.</p>
-</div>
-<h3 id="button-bindings">Button bindings</h3>
-<p>If you set the binding type to button you just need to select a button from the dropdown for your binding. The buttons available in the dropdown have names for the same positions in a PS4 controller or an XBox controller (Cross in a PS4 controller is equivalent to A in an XBox controller). You can also have use a keyboard ke, just check "Key as button" and then you will be able to select a key from the dropdown.<br />
-There's also another possibility: turning an axis to a button. To do that check "Axis as button", select the axis you want in the dropdown and configure the "Released zone". The released zone determines when the button is at the released state, so if the modulus of the axis value (the square root of the axis value², making negative values positive) is smaller than the released zone the button will be in the released state, if greater then the button will be in the pressed state. If you want the "Released zone" to turn into a "Pressed zone" check "Invert?", it will work in "reverse" so when the modulus of the axis value is smaller than the "pressed zone" the button will be in the pressed state.</p>
-<h3 id="axis-bindings">Axis bindings</h3>
-<p>If the binding type of your binding is set to Axis there are a few options you can change. First, you can select an axis for your binding from the dropdown, then you can set a deadzone to it and invert it if you'd like.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The deadzone set in the bindings will be added to the deadzone set in the InputConfigs. Example: if the LeftStick_X axis has a 0.19 deadzone in the InputConfigs and your binding has a 0.1 deadzone then the actual deadzone of the LeftStick_X axis will be 0.29.</p>
-</div>
-<p>You can also make a button behave as an axis (i.e. when the button is pressed the axis binding value will be 1 and when the button is released the binding value will be 0). To do that just check "Button as axis", select a button and set the pressed and released values. If you want to make a key behave as an axis just check "Key as axis".</p>
-<h3 id="multiple-bindings-with-the-same-name">Multiple bindings with the same name</h3>
-<p>If you want two buttons to do the same thing in your game you can have multiple bindings with the same name. When you call <code>GetButton("Jump", InputType.Hold)</code> true will be returned if any of the button bindings is pressed. The same can be done with <code>GetAxis</code>, but then the values of the axes will be added together and then the result value will be clamped between -1 and 1.</p>
+                <h1 id="help">Help</h1>
+<p>Here you can find solutions to errors you might encounter.</p>
+<h2 id="ezinput-is-not-detecting-my-controller-profile">EzInput is not detecting my controller profile</h2>
+<p>Make sure you added the controller profile to the "controller profiles" list in EzInput's prefab. You can find the prefab at <code>EzInput/Resources</code>.</p>
+<h2 id="how-do-i-change-the-bindings-controller-profiles-or-default-controller-profile-at-runtime">How do I change the bindings, controller profiles or default controller profile at runtime?</h2>
+<p>Take a look at <a href="../code-reference/#changing-bindings-controller-profiles-or-default-controller-profile-at-runtime">this</a>.</p>
+<p>Didn't find a solution for your error/problem? Contact me at <em>lucasba8@gmail.com</em>.</p>
                 
                   
                 
@@ -426,7 +401,7 @@ There's also another possibility: turning an axis to a button. To do that check 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../adding-a-new-button-or-axis/" title="Adding a new button or axis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -435,25 +410,11 @@ There's also another possibility: turning an axis to a button. To do that check 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting started
+                Adding a new button or axis
               </span>
             </div>
           </a>
         
-        
-          <a href="../controller-profiles/" title="Controller profiles" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Controller profiles
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

@@ -244,9 +244,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Code reference
+      </label>
+    
     <a href="./" title="Code reference" class="md-nav__link md-nav__link--active">
       Code reference
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changing-bindings-controller-profiles-or-default-controller-profile-at-runtime" title="Changing bindings, controller profiles or default controller profile at runtime" class="md-nav__link">
+    Changing bindings, controller profiles or default controller profile at runtime
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -259,6 +288,30 @@
   <li class="md-nav__item">
     <a href="../the-ezinput-prefab/" title="The EzInput prefab" class="md-nav__link">
       The EzInput prefab
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../adding-a-new-button-or-axis/" title="Adding a new button or axis" class="md-nav__link">
+      Adding a new button or axis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../help/" title="Help" class="md-nav__link">
+      Help
     </a>
   </li>
 
@@ -279,6 +332,22 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changing-bindings-controller-profiles-or-default-controller-profile-at-runtime" title="Changing bindings, controller profiles or default controller profile at runtime" class="md-nav__link">
+    Changing bindings, controller profiles or default controller profile at runtime
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -328,6 +397,12 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Don't forget to declare that you're using the <code>EzInputManager</code> namespace at the top of your .cs file like <code>using EzInputManager</code>.</p>
+</div>
+<h2 id="changing-bindings-controller-profiles-or-default-controller-profile-at-runtime">Changing bindings, controller profiles or default controller profile at runtime</h2>
+<p>EzInput provides you a way to easily modify the bindings file, for example, at use by EzInput at runtime through code. You can access bindings file EzInput uses with <code>EzInput.Bindings</code>, the controller profiles list with <code>EzInput.ControllerProfiles</code> and the default controller profile with <code>EzInput.DefaultControllerPofile</code>. After you change any of those don't forget to call <code>EzInput.Restart()</code> so it can reconfigure itself with the new settings.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Don't forget to call <code>EzInput.Restart()</code> after changing any of thsese variables. If you forget to do that you're most likely going to get incorrect input data and receive a few errors.</p>
 </div>
                 
                   

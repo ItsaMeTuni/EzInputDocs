@@ -306,6 +306,30 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="adding-a-new-button-or-axis/" title="Adding a new button or axis" class="md-nav__link">
+      Adding a new button or axis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="help/" title="Help" class="md-nav__link">
+      Help
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -367,41 +391,41 @@
                 <h1 id="getting-started">Getting started</h1>
 <p>If you'd like, there is a video here[INSERT LINK] covering everthing in this page.</p>
 <h2 id="the-input-manager-asset-file">The input manager asset file</h2>
-<p>The first thing you want to do when you import EzInput to your project is substitute the <code>InputManager.asset</code> file in your project's <code>ProjectSettings</code> folder with the file in <code>InputManager.zip</code>, that came with the EzInput. The reason for this is that EzInput uses Unity's built-in input manager but there is no way of accessing specific axes of specific controllers manually by code so we need to create roughly 250 (yeah...) entries in the input manager to be able to read those values. If you didn't get it, nervermind, just do it 🙂.</p>
+<p>The first thing you want to do when you import EzInput to your project is substitute the <code>InputManager.asset</code> file in your project's <code>ProjectSettings</code> folder with the file in <code>InputManager.zip</code>, that came with EzInput. The reason for this is that EzInput uses Unity's built-in input manager but there is no way of accessing specific axes of specific controllers manually by code so we need to create roughly 250 (yeah...) entries in the input manager to be able to read those values. If you didn't get it, nervermind, it's not that important 🙂.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>you might want to make a backup of your <code>InputManager.asset</code> since you might want that input configuration back in case you decide not to use EzInput (not that there is a reason for taking a stupid decision as that 😅).</p>
 </div>
 <h2 id="setting-up-the-bindings">Setting up the bindings</h2>
-<p>If you go to <code>EzInput/Data</code> you'll see there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The <em>EzInputBindings</em> file is where all your bindings will be stored. If you click on the <em>EzInputBindings</em> file and then "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs. You can read an in-depth review on the Bindings file <a href="The-bindings.md">here</a>.</p>
+<p>If you go to <code>EzInput/Data</code> you'll see there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The <em>Bindings</em> file is where all your bindings will be stored. If you click on the <em>Bindings</em> file and then click "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs. You can read an in-depth review on the Bindings file <a href="The-bindings.md">here</a>.</p>
 <h2 id="reading-the-values-through-code">Reading the values through code</h2>
 <p>The best way to explain how to read values is by using examples, so here they are:</p>
-<div class="codehilite"><pre><span></span><span class="c1">//This will return true when the user presses the Cross button on a PS4 controller or A button on an XBox controller in any of the connected controllers</span>
+<div class="codehilite"><pre><span></span><span class="c1">//This will return true when the user presses the A button on an XBox controller (or the Cross button on a PS4 controller) in any of the connected controllers</span>
 <span class="n">EzInput</span><span class="p">.</span><span class="n">GetButton</span><span class="p">(</span><span class="n">ButtonCode</span><span class="p">.</span><span class="n">Cross_A</span><span class="p">,</span> <span class="n">InputType</span><span class="p">.</span><span class="n">Press</span><span class="p">,</span> <span class="n">EzInput</span><span class="p">.</span><span class="n">ALL</span><span class="p">);</span>
 
 <span class="c1">//This will return true if the left d-pad button is pressed down on the third controller (controller IDs are zero-based)</span>
 <span class="n">EzInput</span><span class="p">.</span><span class="n">GetButton</span><span class="p">(</span><span class="s">&quot;Jump&quot;</span><span class="p">,</span> <span class="n">InputType</span><span class="p">.</span><span class="n">Hold</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
 
-<span class="c1">//This will return true when the &quot;Jump&quot; button binding is released on all controllers. Controller ID default to EzInput.All</span>
+<span class="c1">//This will return true when the &quot;Jump&quot; button binding is released on all controllers. The _controller parameter defaults to EzInput.All</span>
 <span class="n">EzInput</span><span class="p">.</span><span class="n">GetButton</span><span class="p">(</span><span class="s">&quot;Jump&quot;</span><span class="p">,</span> <span class="n">InputType</span><span class="p">.</span><span class="n">Release</span><span class="p">);</span>
 
-<span class="c1">//This will return a float value for the axis binding &quot;Horizontal Movement&quot;. Again, Controller ID defaults to EzInput.All</span>
-<span class="n">EzInput</span><span class="p">.</span><span class="n">GetAxis</span><span class="p">(</span><span class="s">&quot;Horizontal Movement&quot;</span><span class="p">);</span>
+<span class="c1">//This will return a float value for the axis binding &quot;HorizontalMovement&quot;. Again, the _controller parameter defaults to EzInput.All</span>
+<span class="n">EzInput</span><span class="p">.</span><span class="n">GetAxis</span><span class="p">(</span><span class="s">&quot;HorizontalMovement&quot;</span><span class="p">);</span>
 
-<span class="c1">//This will return a float value for the axis binding &quot;Vertical Movement&quot; on the second controller.</span>
-<span class="n">EzInput</span><span class="p">.</span><span class="n">GetAxis</span><span class="p">(</span><span class="s">&quot;Vertical Movement&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+<span class="c1">//This will return a float value for the axis binding &quot;VerticalMovement&quot; on the second controller.</span>
+<span class="n">EzInput</span><span class="p">.</span><span class="n">GetAxis</span><span class="p">(</span><span class="s">&quot;VerticalMovement&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
 
 <span class="c1">//This will return a float value for the left stick X axis on all controllers.</span>
 <span class="n">EzInput</span><span class="p">.</span><span class="n">GetAxis</span><span class="p">(</span><span class="n">AxisCode</span><span class="p">.</span><span class="n">LeftStick_X</span><span class="p">,</span> <span class="n">EzInput</span><span class="p">.</span><span class="n">ALL</span><span class="p">);</span>
 </pre></div>
 
 
-<p>Here's a table explaining the <code>InputType</code> enum:</p>
+<p>Here's a table explaining the _state parameter (of type <code>InputType</code>):</p>
 <table>
 <thead>
 <tr>
 <th align="left"><code>InputType</code></th>
-<th align="left">Unity equivalent</th>
+<th align="left">Does the same as</th>
 </tr>
 </thead>
 <tbody>
