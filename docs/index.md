@@ -4,42 +4,42 @@ If you'd like, there is a video here[INSERT LINK] covering everthing in this pag
 
 ## The input manager asset file
 
-The first thing you want to do when you import EzInput to your project is substitute the `InputManager.asset` file in your project's `ProjectSettings` folder with the file in `InputManager.zip`, that came with the EzInput. The reason for this is that EzInput uses Unity's built-in input manager but there is no way of accessing specific axes of specific controllers manually by code so we need to create roughly 250 (yeah...) entries in the input manager to be able to read those values. If you didn't get it, nervermind, just do it 🙂.
+The first thing you want to do when you import EzInput to your project is substitute the `InputManager.asset` file in your project's `ProjectSettings` folder with the file in `InputManager.zip`, that came with EzInput. The reason for this is that EzInput uses Unity's built-in input manager but there is no way of accessing specific axes of specific controllers manually by code so we need to create roughly 250 (yeah...) entries in the input manager to be able to read those values. If you didn't get it, nervermind, it's not that important 🙂.
 
 !!! warning
     you might want to make a backup of your `InputManager.asset` since you might want that input configuration back in case you decide not to use EzInput (not that there is a reason for taking a stupid decision as that 😅).
 
 ## Setting up the bindings
 
-If you go to `EzInput/Data` you'll see there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The _EzInputBindings_ file is where all your bindings will be stored. If you click on the _EzInputBindings_ file and then "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs. You can read an in-depth review on the Bindings file [here](The-bindings.md).
+If you go to `EzInput/Data` you'll see there are a few Scriptable Objects there, you'll be modifying those (and creating more if needed) to fit your needs. The _Bindings_ file is where all your bindings will be stored. If you click on the _Bindings_ file and then click "Add" in it's editor a new binding will show up in the list. You can change the input type of the binding to be either a Button or an Axis and configure it to your needs. You can read an in-depth review on the Bindings file [here](The-bindings.md).
 
 ## Reading the values through code
 
 The best way to explain how to read values is by using examples, so here they are:
 
 ```csharp
-//This will return true when the user presses the Cross button on a PS4 controller or A button on an XBox controller in any of the connected controllers
+//This will return true when the user presses the A button on an XBox controller (or the Cross button on a PS4 controller) in any of the connected controllers
 EzInput.GetButton(ButtonCode.Cross_A, InputType.Press, EzInput.ALL);
 
 //This will return true if the left d-pad button is pressed down on the third controller (controller IDs are zero-based)
 EzInput.GetButton("Jump", InputType.Hold, 2);
 
-//This will return true when the "Jump" button binding is released on all controllers. Controller ID default to EzInput.All
+//This will return true when the "Jump" button binding is released on all controllers. The _controller parameter defaults to EzInput.All
 EzInput.GetButton("Jump", InputType.Release);
 
-//This will return a float value for the axis binding "Horizontal Movement". Again, Controller ID defaults to EzInput.All
-EzInput.GetAxis("Horizontal Movement");
+//This will return a float value for the axis binding "HorizontalMovement". Again, the _controller parameter defaults to EzInput.All
+EzInput.GetAxis("HorizontalMovement");
 
-//This will return a float value for the axis binding "Vertical Movement" on the second controller.
-EzInput.GetAxis("Vertical Movement", 1);
+//This will return a float value for the axis binding "VerticalMovement" on the second controller.
+EzInput.GetAxis("VerticalMovement", 1);
 
 //This will return a float value for the left stick X axis on all controllers.
 EzInput.GetAxis(AxisCode.LeftStick_X, EzInput.ALL);
 ```
 
-Here's a table explaining the `InputType` enum:
+Here's a table explaining the _state parameter (of type `InputType`):
 
-`InputType`          | Unity equivalent
+`InputType`          | Does the same as
 :--------------------|:-------------
 `InputType.Hold`     |`Input.GetButton()`
 `InputType.Press`    |`Input.GetButtonDown()`

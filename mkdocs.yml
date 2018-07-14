@@ -23,3 +23,5 @@ pages:
   - The test scene: 'the-test-scene.md'
   - Code reference: 'code-reference.md'
   - The EzInput prefab: 'the-ezinput-prefab.md'
+  - Adding a new button or axis: 'adding-a-new-button-or-axis.md'
+  - Help: 'help.md'

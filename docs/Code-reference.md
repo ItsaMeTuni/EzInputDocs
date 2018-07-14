@@ -35,3 +35,10 @@ float GetAxis(string _binding, int _controller = ALL)
 
 !!! warning
     Don't forget to declare that you're using the `EzInputManager` namespace at the top of your .cs file like `using EzInputManager`.
+
+## Changing bindings, controller profiles or default controller profile at runtime
+
+EzInput provides you a way to easily modify the bindings file, for example, at use by EzInput at runtime through code. You can access bindings file EzInput uses with `EzInput.Bindings`, the controller profiles list with `EzInput.ControllerProfiles` and the default controller profile with `EzInput.DefaultControllerPofile`. After you change any of those don't forget to call `EzInput.Restart()` so it can reconfigure itself with the new settings.
+
+!!! warning
+    Don't forget to call `EzInput.Restart()` after changing any of thsese variables. If you forget to do that you're most likely going to get incorrect input data and receive a few errors.
