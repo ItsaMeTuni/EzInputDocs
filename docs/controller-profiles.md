@@ -22,7 +22,7 @@ Each axis has an ID, an input range, an output range and can be inverted. The ID
 To create a new controller profile file go to the Project tab in the Editor, right click, Create->EzInput->Controller Profile. 
 
 ## Setting the name of the controller
-The profile stores the name of the controller it is for in the "Name" field (it's the first field in the controller profile editor, you'll find it). Be careful when setting the controller name because it has to match exactly the name of the controller. You can find the name of your controller in the [test scene](test-scene.md) or you can use `Input.GetJoystickNames()` and look into the string array it returns.
+The profile stores the name of the controller it is for in the "Name" field (it's the first field in the controller profile editor, you'll find it). Be careful when setting the controller name because it has to match exactly the name of the controller. You can find the name of your controller in the [test scene](the-test-scene.md) or you can use `Input.GetJoystickNames()` and look into the string array it returns.
 
 ## Setting the platform of the profile
 You can restrict a controller profile to a specific platform by selecting it in the "Target platform" field (you can also select multiple target platforms). Now, you'd probably be asking yourself why do this? The reason behind that is simple. Let's take the XBox 360 controller, in Windows the D-pad works as a pair of axes but in OSX the D-pad is treated as group of buttons. So if you had the same profile for Windows and OSX you'd get incorrect input from the same controller.
