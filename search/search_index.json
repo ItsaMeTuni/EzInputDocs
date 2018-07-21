@@ -137,7 +137,7 @@
         },
         {
             "location": "/help/",
-            "text": "Help\n\n\nHere you can find solutions to errors you might encounter.\n\n\nEzInput is not detecting my controller profile\n\n\nMake sure you added the controller profile to the \"controller profiles\" list in EzInput's prefab. You can find the prefab at \nEzInput/Resources\n.\n\n\nHow do I change the bindings, controller profiles or default controller profile at runtime?\n\n\nTake a look at \nthis\n.\n\n\nDidn't find a solution for your error/problem? Contact me at \nlucasba8@gmail.com\n.",
+            "text": "Help\n\n\nHere you can find solutions to errors you might encounter.\n\n\nEzInput is not detecting my controller profile\n\n\nMake sure you added the controller profile to the \"controller profiles\" list in EzInput's prefab. You can find the prefab at \nEzInput/Resources\n.\n\n\nHow do I change the bindings, controller profiles or default controller profile at runtime?\n\n\nTake a look at \nthis\n.\n\n\nHow about mouse input\n\n\nSince mouse input doesn't change based on platform just use \nInput.GetAxis(\"Mouse X\")\n, \nInput.GetAxis(\"Mouse X\")\n, \nInput.GetMouseButton()\n, \nInput.GetMouseButtonDown()\n, \nInput.GetMouseButtonUp()\n (all from Unity's native \nInput\n class).\n\n\nDidn't find a solution for your error/problem? Contact me at \nlucasba8@gmail.com\n.",
             "title": "Help"
         },
         {
@@ -152,8 +152,13 @@
         },
         {
             "location": "/help/#how-do-i-change-the-bindings-controller-profiles-or-default-controller-profile-at-runtime",
-            "text": "Take a look at  this .  Didn't find a solution for your error/problem? Contact me at  lucasba8@gmail.com .",
+            "text": "Take a look at  this .",
             "title": "How do I change the bindings, controller profiles or default controller profile at runtime?"
+        },
+        {
+            "location": "/help/#how-about-mouse-input",
+            "text": "Since mouse input doesn't change based on platform just use  Input.GetAxis(\"Mouse X\") ,  Input.GetAxis(\"Mouse X\") ,  Input.GetMouseButton() ,  Input.GetMouseButtonDown() ,  Input.GetMouseButtonUp()  (all from Unity's native  Input  class).  Didn't find a solution for your error/problem? Contact me at  lucasba8@gmail.com .",
+            "title": "How about mouse input"
         }
     ]
 }
