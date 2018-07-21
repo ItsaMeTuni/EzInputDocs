@@ -4,7 +4,7 @@ The test scene is a scene that comes with EzInput that you can use to help in th
 
 You can select which controller you want to test on the top right corner of the screen, there's a list with all connected controllers there.
 
-!!! note
+!!! hint
     sometimes the list might not update when connecting/disconnecting a controller so you might need to click "Refresh list".
 
 On the top left corner of the screen you can find a list of all of your keybindings along with their current values.
