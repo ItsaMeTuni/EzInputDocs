@@ -319,7 +319,7 @@
 <p>If, for some reason, you need more buttons for your bindings you can go into <code>Scripts/DataTypes.cs</code> and add elements to the <code>ButtonCode</code> and <code>AxisCode</code> enums. Then you can go into your controller profiles and set the button and axis IDs there (EzInput will detect if you added buttons or axes to those enums). Then to use them in your bindings you just have to select them from the drop down when creating a binding.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Be careful when <em>removing</em> elements from the enums since EzInput can't know <em>which</em> element you removed the IDs in the controller profiles might be shifted.</p>
+<p><strong>DO NOT</strong> remove any items from the enums that originally came with the package. Also, Be careful when <em>removing</em> elements from the enums since EzInput can't know <em>which</em> element you removed the IDs in the controller profiles might be shifted.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
